@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 class Navbar extends React.Component {
@@ -6,7 +7,9 @@ class Navbar extends React.Component {
     handleChange(e) {
         const inputValue = e.target.value;
         const { getData } = this.props;
-        getData(inputValue);
+        if (getData) {
+            getData(inputValue);
+        }
     }
 
     render(){
@@ -20,7 +23,7 @@ class Navbar extends React.Component {
                     placeholder="buscar startup" 
                     />
                 </div>
-                <button>Agregar Startup</button>
+                <Link to="/agregar" className="boton-agregar">Agregar Startup</Link>
             </nav>
         );
     }

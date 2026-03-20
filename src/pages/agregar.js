@@ -13,7 +13,7 @@ class Agregar extends React.Component {
             web:"",
             tw:"",
             ig: "",
-            esta0k:"",
+            estaOk:"",
             showMessage: false
         }
     }
@@ -68,6 +68,7 @@ class Agregar extends React.Component {
                 <input type="text" name="tw" placeholder="Twitter (opcional)" onChange={(e) => this.handleChange(e)}/>
                 <input type="text" name="ig" placeholder="Instagram (opcional)" onChange={(e) => this.handleChange(e)}/>
                 <button className="boton-agregar" onClick={() => this.handleClick()}>enviar</button>
+                <Link to="/" className="volver-link">Volver al inicio</Link>
             </div> 
             </>
         )
